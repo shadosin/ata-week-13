@@ -1,0 +1,134 @@
+{
+    "Metrics-Reservations": [
+        {
+            "PutRequest": {
+                "Item": {
+                    "reservationId": {"S":"098dc380-ddec-4f9a-9e92-c4ffb151631a"},
+                    "guestId": {"S": "1234567890"},
+                    "checkInDate": {"S": "2022-07-15"},
+                    "numberOfNights": {"N":"5"},
+                    "isCancelled": {"BOOL": false},
+                    "costPerNight": {"N": "220"},
+                    "totalCost": {"N": "1100"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "reservationId": {"S":"3310ce4f-9497-4360-b220-6139a249f6c2"},
+                    "guestId": {"S": "0987654321"},
+                    "checkInDate": {"S": "2022-07-01"},
+                    "numberOfNights": {"N":"3"},
+                    "isCancelled": {"BOOL": false},
+                    "costPerNight": {"N": "200"},
+                    "totalCost": {"N": "600"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "reservationId": {"S":"e13f1492-a128-49a1-b584-6c26cf620f9c"},
+                    "guestId": {"S": "1019293232"},
+                    "checkInDate": {"S": "2022-04-15"},
+                    "numberOfNights": {"N":"7"},
+                    "isCancelled": {"BOOL": true},
+                    "costPerNight": {"N": "220"},
+                    "totalCost": {"N": "1540"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "reservationId": {"S":"38497ff7-409d-4b78-b2f3-610b26298ffa"},
+                    "guestId": {"S": "9876384723"},
+                    "checkInDate": {"S": "2022-08-31"},
+                    "numberOfNights": {"N":"7"},
+                    "isCancelled": {"BOOL": false},
+                    "costPerNight": {"N": "250"},
+                    "totalCost": {"N": "1750"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "reservationId": {"S":"64873e5e-fa6e-4dbe-969a-4038b878a728"},
+                    "guestId": {"S": "2386723433"},
+                    "checkInDate": {"S": "2022-09-02"},
+                    "numberOfNights": {"N":"6"},
+                    "isCancelled": {"BOOL": false},
+                    "costPerNight": {"N": "180"},
+                    "totalCost": {"N": "1080"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "reservationId": {"S":"409e3cce-b580-4b03-bdef-85db4d66ed49"},
+                    "guestId": {"S": "8762368720"},
+                    "checkInDate": {"S": "2022-05-21"},
+                    "numberOfNights": {"N":"1"},
+                    "isCancelled": {"BOOL": false},
+                    "costPerNight": {"N": "250"},
+                    "totalCost": {"N": "250"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "reservationId": {"S":"87390a11-9f7b-4bee-a924-1ed8d2afbc15"},
+                    "guestId": {"S": "1234567890"},
+                    "checkInDate": {"S": "2022-07-15"},
+                    "numberOfNights": {"N":"5"},
+                    "isCancelled": {"BOOL": false},
+                    "costPerNight": {"N": "220"},
+                    "totalCost": {"N": "1100"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "reservationId": {"S":"567e1fc3-3ab5-43ac-ba37-002ad6c4ad27"},
+                    "guestId": {"S": "1234567890"},
+                    "checkInDate": {"S": "2022-07-15"},
+                    "numberOfNights": {"N":"5"},
+                    "isCancelled": {"BOOL": false},
+                    "costPerNight": {"N": "220"},
+                    "totalCost": {"N": "1100"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "reservationId": {"S":"04a1db5f-76e9-4dca-a6f3-ad56d4042c50"},
+                    "guestId": {"S": "9872876043"},
+                    "checkInDate": {"S": "2022-06-15"},
+                    "numberOfNights": {"N":"5"},
+                    "isCancelled": {"BOOL": false},
+                    "costPerNight": {"N": "220"},
+                    "totalCost": {"N": "1100"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "reservationId": {"S":"d57514b7-2a64-4351-865a-7c36614802c1"},
+                    "guestId": {"S": "1234567890"},
+                    "checkInDate": {"S": "2023-12-15"},
+                    "numberOfNights": {"N":"14"},
+                    "isCancelled": {"BOOL": false},
+                    "costPerNight": {"N": "250"},
+                    "totalCost": {"N": "3500"}
+                }
+            }
+        }
+    ]
+}

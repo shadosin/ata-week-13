@@ -1,0 +1,87 @@
+import groovy.xml.XmlSlurper
+
+plugins {
+    id 'ata-curriculum.snippets-conventions'
+}
+
+checkstyle {
+    def suppressionFile = rootProject.file('Utilities/ATACheckstyle/configuration/checkstyle/unit1/suppressions.xml')
+    configProperties.put('checkstyle.suppression.filter', suppressionFile)
+}
+def wflowToTestsMap = [
+        'iterators-socialcalendar-activitytest': ['com.kenzie.socialcalendar.activity.DeleteMemberActivityTest'],
+        'iterators-socialcalendar-eventdaotest': ['com.kenzie.socialcalendar.dao.EventDaoTest'],
+        'iterators-socialcalendar-invitedaotest': ['com.kenzie.socialcalendar.dao.InviteDaoTest'],
+        'iterators-socialcalendar-memberdaotest': ['com.kenzie.socialcalendar.dao.MemberDaoTest'],
+        'iterators-socialcalendar-Phase0Test': ['com.kenzie.socialcalendar.Phase0Test'],
+        'iterators-socialcalendar-Phase1Test': ['com.kenzie.socialcalendar.Phase1Test'],
+        'iterators-socialcalendar-Phase2Test': ['com.kenzie.socialcalendar.Phase2Test'],
+        'iterators-socialcalendar-Phase3Test': ['com.kenzie.socialcalendar.Phase3Test'],
+        'iterators-socialcalendar-Phase4Test': ['com.kenzie.socialcalendar.Phase4Test'],
+        'iterators-socialcalendar-all-tests': ['com.kenzie.socialcalendar.activity.DeleteMemberActivityTest',
+                                               'com.kenzie.socialcalendar.dao.EventDaoTest',
+                                               'com.kenzie.socialcalendar.dao.InviteDaoTest',
+                                               'com.kenzie.socialcalendar.dao.MemberDaoTest',
+                                               'com.kenzie.socialcalendar.Phase0Test',
+                                               'com.kenzie.socialcalendar.Phase1Test',
+                                               'com.kenzie.socialcalendar.Phase2Test',
+                                               'com.kenzie.socialcalendar.Phase3Test',
+                                               'com.kenzie.socialcalendar.Phase4Test'
+        ]
+
+]
+
+wflowToTestsMap.forEach { wflowName, testList ->
+    tasks.register(wflowName) {
+        dependsOn wflowtest
+        test.doFirst {
+            filter {
+                testList.each { includeTestsMatching it }
+            }
+        }
+        test.finalizedBy(copyTestResults)
+    }
+}
+
+tasks.register('copyTestResults', Copy) {
+    from(layout.buildDirectory.dir("test-results")) {
+        include "test/TEST-com.kenzie.socialcalendar.Phase0Test.xml"
+        include "test/TEST-com.kenzie.socialcalendar.Phase1Test.xml"
+        include "test/TEST-com.kenzie.socialcalendar.Phase2Test.xml"
+        include "test/TEST-com.kenzie.socialcalendar.Phase3Test.xml"
+        include "test/TEST-com.kenzie.socialcalendar.Phase4Test.xml"
+
+    }
+    into layout.projectDirectory.dir("test-results")
+}
+
+def integrationResults = ["test/TEST-com.kenzie.socialcalendar.Phase0Test.xml",
+                          "test/TEST-com.kenzie.socialcalendar.Phase1Test.xml",
+                          "test/TEST-com.kenzie.socialcalendar.Phase2Test.xml",
+                          "test/TEST-com.kenzie.socialcalendar.Phase3Test.xml",
+                          "test/TEST-com.kenzie.socialcalendar.Phase4Test.xml"]
+
+tasks.register('verifytests-socialcalendar') {
+    dependsOn tasks.copyTestResults
+    doLast {
+        integrationResults.forEach {
+            def testResult = layout.projectDirectory.dir("test-results").file(it).asFile
+            def attributesMap = new XmlSlurper().parse(testResult).attributes()
+            assert attributesMap.get("skipped") == "0"
+            assert attributesMap.get("failures") == "0"
+            assert attributesMap.get("errors") == "0"
+        }
+    }
+}
+
+dependencies {
+    implementation 'javax.inject:javax.inject:1'
+    implementation 'com.google.dagger:hilt-compiler:2.41'
+    implementation 'com.google.dagger:dagger:2.30'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.30'
+    testAnnotationProcessor 'com.google.dagger:hilt-compiler:2.41'
+}
+
+repositories {
+    mavenCentral()
+}

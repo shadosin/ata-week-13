@@ -1,0 +1,28 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: CFT for DynamoDB Reservations table setup for ATA Week 13 activities
+
+Resources:
+  MetricsReservations:
+    Type: AWS::DynamoDB::Table
+    Properties: 
+      TableName: "Metrics-Reservations"
+      AttributeDefinitions: 
+        - AttributeName: "reservationId"
+          AttributeType: "S"
+      BillingMode: "PAY_PER_REQUEST"
+      ContributorInsightsSpecification: 
+        Enabled: false
+      KeySchema: 
+        - AttributeName: "reservationId"
+          KeyType: HASH
+      PointInTimeRecoverySpecification: 
+        PointInTimeRecoveryEnabled: false
+      TableClass: "STANDARD"
+      Tags: 
+        - Key: Week
+          Value: 13
+        - Key: CourseName
+          Value: ata
+        - Key: InstructorMade
+          Value: true
+  

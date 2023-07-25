@@ -1,0 +1,61 @@
+plugins {
+    id 'ata-curriculum.snippets-conventions'
+}
+
+checkstyle {
+    def suppressionFile = rootProject.file('Utilities/ATACheckstyle/configuration/checkstyle/unit1/suppressions.xml')
+    configProperties.put('checkstyle.suppression.filter', suppressionFile)
+}
+def wflowToTestsMap = [
+        'dynamodbquery-socialcalendar-deletetest': ['com.kenzie.activity.DeleteMemberActivityTest'],
+        'dynamodbquery-socialcalendar-betweendatestest': ['com.kenzie.activity.GetEventAnnouncementsBetweenDatesActivityTest'],
+        'dynamodbquery-socialcalendar-getinvitestest': ['com.kenzie.activity.GetInvitesForEventActivityTest'],
+        'dynamodbquery-socialcalendar-geteventtest': ['com.kenzie.activity.GetEventAnnouncementsActivityTest'],
+        'dynamodbquery-phase0': ['com.kenzie.Phase0Test'],
+        'dynamodbquery-phase1': ['com.kenzie.Phase1Test'],
+        'dynamodbquery-phase2': ['com.kenzie.Phase2Test'],
+        'dynamodbquery-phase3': ['com.kenzie.Phase3Test'],
+        'dynamodbquery-phase4': ['com.kenzie.Phase4Test'],
+        'dynamodbquery-socialcalendar-invitedao-test': ['com.kenzie.dao.InviteDaoTest'],
+        'dynamodbquery-socialcalendar-eventannouncementdao--test': ['com.kenzie.dao.EventAnnouncementDaoTest'],
+        'dynamodbquery-socialcalendar-all-tests': [
+                'com.kenzie.Phase0Test',
+                'com.kenzie.Phase1Test',
+                'com.kenzie.Phase2Test',
+                'com.kenzie.Phase3Test',
+                'com.kenzie.Phase4Test',
+                'com.kenzie.dao.EventAnnouncementDaoTest',
+                'com.kenzie.dao.InviteDaoTest',
+                'com.kenzie.activity.GetInvitesForEventActivityTest',
+                'com.kenzie.activity.GetEventAnnouncementsActivityTest',
+                'com.kenzie.activity.GetEventAnnouncementsBetweenDatesActivityTest'],
+        'dynamodbquery-socialcalendar-github-tests': [
+                'com.kenzie.dao.EventAnnouncementDaoTest',
+                'com.kenzie.dao.InviteDaoTest',
+                'com.kenzie.activity.GetInvitesForEventActivityTest',
+                'com.kenzie.activity.GetEventAnnouncementsActivityTest',
+                'com.kenzie.activity.GetEventAnnouncementsBetweenDatesActivityTest'
+        ]
+]
+
+wflowToTestsMap.forEach { wflowName, testList ->
+    tasks.register(wflowName) {
+        dependsOn wflowtest
+        test.doFirst {
+            filter {
+                testList.each { includeTestsMatching it }
+            }
+        }
+    }
+}
+dependencies {
+    implementation 'javax.inject:javax.inject:1'
+    implementation 'com.google.dagger:hilt-compiler:2.41'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.30'
+    testAnnotationProcessor 'com.google.dagger:hilt-compiler:2.41'
+    implementation 'com.amazonaws:aws-java-sdk-cloudwatch:1.12.184'
+}
+
+repositories {
+    mavenCentral()
+}

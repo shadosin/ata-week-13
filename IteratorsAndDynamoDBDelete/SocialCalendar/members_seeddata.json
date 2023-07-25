@@ -1,0 +1,52 @@
+{
+    "DynamoDBDeleteIterators-Members": [
+        {
+            "PutRequest": {
+                "Item": {
+                    "id": {"S":"1234567890"},
+                    "name": {"S":"John Jackson"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "id": {"S":"0192837465"},
+                    "name": {"S":"James Johnson"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "id": {"S":"0987654321"},
+                    "name": {"S":"Jane Jameson"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "id": {"S":"2468013579"},
+                    "name": {"S":"Hank Hill"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "id": {"S":"3456789012"},
+                    "name": {"S":"Daniel Hernandez"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "id": {"S":"2873646238"},
+                    "name": {"S":"Eamon Gus"}
+                }
+            }
+        }
+    ]
+}

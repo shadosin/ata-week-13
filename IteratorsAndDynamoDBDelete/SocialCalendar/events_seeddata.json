@@ -1,0 +1,124 @@
+{
+    "DynamoDBDeleteIterators-Events": [
+        {
+            "PutRequest": {
+                "Item": {
+                    "id": {"S":"098dc380-ddec-4f9a-9e92-c4ffb151631a"},
+                    "organizerId": {"S":"12345678"},
+                    "time": {"S": "2022-04-25"},
+                    "name": {"S": "New Event"},
+                    "description": {"S": "A brand new event!"},
+                    "isCanceled": {"BOOL": false}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "id": {"S":"3310ce4f-9497-4360-b220-6139a249f6c2"},
+                    "organizerId": {"S":"87654321"},
+                    "time": {"S": "2022-04-19"},
+                    "name": {"S": "Potluck Event"},
+                    "description": {"S": "Bring food for some and have food from some!"},
+                    "isCanceled": {"BOOL": false}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "id": {"S":"e13f1492-a128-49a1-b584-6c26cf620f9c"},
+                    "organizerId": {"S":"34567890"},
+                    "time": {"S": "2022-06-25"},
+                    "name": {"S": "Volleyball game"},
+                    "description": {"S": "We have the volleyball, you just bring your game!"},
+                    "isCanceled": {"BOOL": false}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "id": {"S":"38497ff7-409d-4b78-b2f3-610b26298ffa"},
+                    "organizerId": {"S":"09876543"},
+                    "time": {"S": "2022-04-03"},
+                    "name": {"S": "Java User Group Monthly Meetup"},
+                    "description": {"S": "We talk about Java and Java-inspired tools"},
+                    "isCanceled": {"BOOL": true}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "id": {"S":"64873e5e-fa6e-4dbe-969a-4038b878a728"},
+                    "organizerId": {"S":"13579246"},
+                    "time": {"S": "2022-06-01"},
+                    "name": {"S": "Conference"},
+                    "description": {"S": "A conference about code!"},
+                    "isCanceled": {"BOOL": false}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "id": {"S":"409e3cce-b580-4b03-bdef-85db4d66ed49"},
+                    "organizerId": {"S":"24680135"},
+                    "time": {"S": "2022-05-11"},
+                    "name": {"S": "In-Person Celebration"},
+                    "description": {"S": "Let's meet up and hang out!"},
+                    "isCanceled": {"BOOL": true}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "id": {"S":"87390a11-9f7b-4bee-a924-1ed8d2afbc15"},
+                    "organizerId": {"S":"98765432"},
+                    "time": {"S": "2022-06-15"},
+                    "name": {"S": "Beginner's yoga class"},
+                    "description": {"S": "Stretch out those muscles."},
+                    "isCanceled": {"BOOL": false}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "id": {"S":"567e1fc3-3ab5-43ac-ba37-002ad6c4ad27"},
+                    "organizerId": {"S":"23456789"},
+                    "time": {"S": "2022-05-02"},
+                    "name": {"S": "Swimming session"},
+                    "description": {"S": "Pool's closed"},
+                    "isCanceled": {"BOOL": true}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "id": {"S":"04a1db5f-76e9-4dca-a6f3-ad56d4042c50"},
+                    "organizerId": {"S":"08642975"},
+                    "time": {"S": "2022-04-18"},
+                    "name": {"S": "Holiday festival"},
+                    "description": {"S": "Happy April 18th!"},
+                    "isCanceled": {"BOOL": false}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "id": {"S":"d57514b7-2a64-4351-865a-7c36614802c1"},
+                    "organizerId": {"S":"97531086"},
+                    "time": {"S": "2022-05-25"},
+                    "name": {"S": "New Event"},
+                    "description": {"S": "A brand new event!"},
+                    "isCanceled": {"BOOL": false}
+                }
+            }
+        }
+    ]
+}

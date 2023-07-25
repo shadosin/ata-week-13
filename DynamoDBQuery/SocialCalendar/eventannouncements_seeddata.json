@@ -1,0 +1,114 @@
+{
+    "DynamoDBQuery-EventAnnouncements": [
+        {
+            "PutRequest": {
+                "Item": {
+                    "eventId": {"S":"098dc380-ddec-4f9a-9e92-c4ffb151631a"},
+                    "organizerId": {"S":"12345678"},
+                    "timePublished": {"S": "2022-04-25"},
+                    "subject": {"S": "Announcements for New Event"},
+                    "content": {"S": "A brand new event!"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "eventId": {"S":"3310ce4f-9497-4360-b220-6139a249f6c2"},
+                    "organizerId": {"S":"87654321"},
+                    "timePublished": {"S": "2022-04-19"},
+                    "subject": {"S": "Announcements for Potluck Event"},
+                    "content": {"S": "Bring food for some and have food from some!"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "eventId": {"S":"e13f1492-a128-49a1-b584-6c26cf620f9c"},
+                    "organizerId": {"S":"34567890"},
+                    "timePublished": {"S": "2022-06-25"},
+                    "subject": {"S": "Announcements for Volleyball game"},
+                    "content": {"S": "We have the volleyball, you just bring your game!"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "eventId": {"S":"38497ff7-409d-4b78-b2f3-610b26298ffa"},
+                    "organizerId": {"S":"09876543"},
+                    "timePublished": {"S": "2022-04-03"},
+                    "subject": {"S": "Announcements for Java User Group Monthly Meetup"},
+                    "content": {"S": "We talk about Java and Java-inspired tools"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "eventId": {"S":"64873e5e-fa6e-4dbe-969a-4038b878a728"},
+                    "organizerId": {"S":"13579246"},
+                    "timePublished": {"S": "2022-06-01"},
+                    "subject": {"S": "Announcements for Conference"},
+                    "content": {"S": "A conference about code!"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "eventId": {"S":"409e3cce-b580-4b03-bdef-85db4d66ed49"},
+                    "organizerId": {"S":"24680135"},
+                    "timePublished": {"S": "2022-05-11"},
+                    "subject": {"S": "Announcements for In-Person Celebration"},
+                    "content": {"S": "Let's meet up and hang out!"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "eventId": {"S":"87390a11-9f7b-4bee-a924-1ed8d2afbc15"},
+                    "organizerId": {"S":"98765432"},
+                    "timePublished": {"S": "2022-06-15"},
+                    "subject": {"S": "Announcements for Beginner's yoga class"},
+                    "content": {"S": "Stretch out those muscles."}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "eventId": {"S":"567e1fc3-3ab5-43ac-ba37-002ad6c4ad27"},
+                    "organizerId": {"S":"23456789"},
+                    "timePublished": {"S": "2022-05-02"},
+                    "subject": {"S": "Announcements for Swimming session"},
+                    "content": {"S": "Pool's closed"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "eventId": {"S":"04a1db5f-76e9-4dca-a6f3-ad56d4042c50"},
+                    "organizerId": {"S":"08642975"},
+                    "timePublished": {"S": "2022-04-18"},
+                    "subject": {"S": "Announcements for Holiday festival"},
+                    "content": {"S": "Happy April 18th!"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "eventId": {"S":"d57514b7-2a64-4351-865a-7c36614802c1"},
+                    "organizerId": {"S":"97531086"},
+                    "timePublished": {"S": "2022-05-25"},
+                    "subject": {"S": "Announcements for New Event"},
+                    "content": {"S": "A brand new event!"}
+                }
+            }
+        }
+    ]
+}

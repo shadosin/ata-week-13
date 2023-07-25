@@ -1,0 +1,114 @@
+{
+    "ClothingItems": [
+        {
+            "PutRequest": {
+                "Item": {
+                    "id": {"S":"sh_39802342"},
+                    "clothing_type": {"S":"sneakers"},
+                    "color": {"S":"black"},
+                    "price": {"N":"75"},
+                    "status": {"S":"active"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "id": {"S":"sh_66555342"},
+                    "clothing_type": {"S":"dress shoes"},
+                    "color": {"S":"black"},
+                    "cost": {"N":"50"},
+                    "status": {"S":"active"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "id": {"S":"je_398020b8"},
+                    "clothing_type": {"S":"jeans"},
+                    "color": {"S":"blue"},
+                    "cost": {"N":"60"},
+                    "status": {"S":"sold"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "id": {"S":"ts_3332232"},
+                    "clothing_type": {"S":"t-shirt"},
+                    "color": {"S":"white"},
+                    "cost": {"N":"20"},
+                    "status": {"S":"active"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "id": {"S":"jw_23232323"},
+                    "clothing_type": {"S":"bracelet"},
+                    "color": {"S":"multicolor"},
+                    "cost": {"N":"25"},
+                    "status": {"S":"sold"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "id": {"S":"ja_232323"},
+                    "clothing_type": {"S":"blazer"},
+                    "color": {"S":"navy blue"},
+                    "cost": {"N":"150"},
+                    "status": {"S":"active"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "id": {"S":"sh_99887766"},
+                    "clothing_type": {"S":"sandals"},
+                    "color": {"S":"brown"},
+                    "cost": {"N":"60"},
+                    "status": {"S":"sold"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "id": {"S":"pa_0006633"},
+                    "clothing_type": {"S":"shorts"},
+                    "color": {"S":"green"},
+                    "cost": {"N":"30"},
+                    "status": {"S":"active"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "id": {"S":"jw_43434343"},
+                    "clothing_type": {"S":"sunglasses"},
+                    "color": {"S":"blue"},
+                    "cost": {"N":"25"},
+                    "status": {"S":"sold"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "id": {"S":"jw_33223322"},
+                    "clothing_type": {"S":"watch"},
+                    "color": {"S":"silver"},
+                    "cost": {"N":"1000"},
+                    "status": {"S":"for sale"}
+                }
+            }
+        }
+    ]
+}

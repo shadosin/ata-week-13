@@ -1,0 +1,37 @@
+plugins {
+    id 'ata-curriculum.snippets-conventions'
+}
+
+checkstyle {
+    def suppressionFile = rootProject.file('Utilities/ATACheckstyle/configuration/checkstyle/unit1/suppressions.xml')
+    configProperties.put('checkstyle.suppression.filter', suppressionFile)
+}
+def wflowToTestsMap = [
+        'dynamodbquery-book-test': [
+            'com.kenzie.dynamodbquery.book.BookDAOTest'
+        ],
+        'dynamodbquery-book-test2': [
+        'com.kenzie.dynamodbquery.book.BookDAO2Test'
+        ]
+]
+
+def wflowToMainClassMap = [
+        'book-app-cli': 'com.kenzie.dynamodbquery.book.BookApp'
+]
+wflowToMainClassMap.forEach { wflowName, mainClass ->
+    tasks.register(wflowName) {
+        runMain.mainClass.set(mainClass)
+        dependsOn runMain
+    }
+}
+
+wflowToTestsMap.forEach { wflowName, testList ->
+    tasks.register(wflowName) {
+        dependsOn wflowtest
+        test.doFirst {
+            filter {
+                testList.each { includeTestsMatching it }
+            }
+        }
+    }
+}

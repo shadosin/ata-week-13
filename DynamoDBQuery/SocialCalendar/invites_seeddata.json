@@ -1,0 +1,104 @@
+{
+    "DynamoDBQuery-Invites": [
+        {
+            "PutRequest": {
+                "Item": {
+                    "eventId": {"S":"098dc380-ddec-4f9a-9e92-c4ffb151631a"},
+                    "memberId": {"S":"1234567890"},
+                    "isAttending": {"BOOL": true},
+                    "isCancelled": {"BOOL": false}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "eventId": {"S":"3310ce4f-9497-4360-b220-6139a249f6c2"},
+                    "memberId": {"S":"0192837465"},
+                    "isAttending": {"BOOL": false},
+                    "isCancelled": {"BOOL": true}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "eventId": {"S":"e13f1492-a128-49a1-b584-6c26cf620f9c"},
+                    "memberId": {"S":"0987654321"},
+                    "isAttending": {"BOOL": false},
+                    "isCancelled": {"BOOL": false}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "eventId": {"S":"38497ff7-409d-4b78-b2f3-610b26298ffa"},
+                    "memberId": {"S":"1234567890"},
+                    "isAttending": {"BOOL": false},
+                    "isCancelled": {"BOOL": true}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "eventId": {"S":"64873e5e-fa6e-4dbe-969a-4038b878a728"},
+                    "memberId": {"S":"2468013579"},
+                    "isAttending": {"BOOL": false},
+                    "isCancelled": {"BOOL": false}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "eventId": {"S":"409e3cce-b580-4b03-bdef-85db4d66ed49"},
+                    "memberId": {"S":"0192837465"},
+                    "isAttending": {"BOOL": false},
+                    "isCancelled": {"BOOL": true}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "eventId": {"S":"87390a11-9f7b-4bee-a924-1ed8d2afbc15"},
+                    "memberId": {"S":"3456789012"},
+                    "isAttending": {"BOOL": false},
+                    "isCancelled": {"BOOL": false}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "eventId": {"S":"567e1fc3-3ab5-43ac-ba37-002ad6c4ad27"},
+                    "memberId": {"S":"1234567890"},
+                    "isAttending": {"BOOL": false},
+                    "isCancelled": {"BOOL": false}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "eventId": {"S":"04a1db5f-76e9-4dca-a6f3-ad56d4042c50"},
+                    "memberId": {"S":"0864297531"},
+                    "isAttending": {"BOOL": true},
+                    "isCancelled": {"BOOL": false}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "eventId": {"S":"d57514b7-2a64-4351-865a-7c36614802c1"},
+                    "memberId": {"S":"2873646238"},
+                    "isAttending": {"BOOL": true},
+                    "isCancelled": {"BOOL": false}
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,193 @@
+{
+    "LogEntries": [
+        {
+            "PutRequest": {
+                "Item": {
+                    "log_level": {"S":"INFO"},
+                    "time_stamp": {"S":"20220415-13:13:54"},
+                    "message": {"S":"The application is loading"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "log_level": {"S":"INFO"},
+                    "time_stamp": {"S":"20200109-15:28:18"},
+                    "message": {"S":"The application is loading"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "log_level": {"S":"INFO"},
+                    "time_stamp": {"S":"20200109-16:45:01"},
+                    "message": {"S":"The application is loading"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "log_level": {"S":"DEBUG"},
+                    "time_stamp": {"S":"20220415-13:13:55"},
+                    "message": {"S":"Making call to APIs..."}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "log_level": {"S":"INFO"},
+                    "time_stamp": {"S":"20220415-13:13:58"},
+                    "message": {"S":"Retrieved data from APIs"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "log_level": {"S":"INFO"},
+                    "time_stamp": {"S":"20200109-20:17:05"},
+                    "message": {"S":"Retrieved data from APIs"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "log_level": {"S":"DEBUG"},
+                    "time_stamp": {"S":"20220415-13:13:59"},
+                    "message": {"S":"Storing retrieved info to database..."}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "log_level": {"S":"ERROR"},
+                    "time_stamp": {"S":"20220415-13:14:01"},
+                    "message": {"S":"Something went wrong when attempting to store information!"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "log_level": {"S":"INFO"},
+                    "time_stamp": {"S":"20200112-12:15:36"},
+                    "message": {"S":"Retrieved data from APIs"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "log_level": {"S":"INFO"},
+                    "time_stamp": {"S":"20200109-12:15:36"},
+                    "message": {"S":"Retrieved data from APIs"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "log_level": {"S":"INFO"},
+                    "time_stamp": {"S":"20220415-13:14:02"},
+                    "message": {"S":"Retrying storing retrieved info to database..."}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "log_level": {"S":"INFO"},
+                    "time_stamp": {"S":"20200113-08:47:56"},
+                    "message": {"S":"Retrying storing retrieved info to database..."}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "log_level": {"S":"INFO"},
+                    "time_stamp": {"S":"20220415-13:14:03"},
+                    "message": {"S":"Successfully stored retrieved info to database"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "log_level": {"S":"INFO"},
+                    "time_stamp": {"S":"20200109-12:15:42"},
+                    "message": {"S":"Successfully stored retrieved info to database"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "log_level": {"S":"INFO"},
+                    "time_stamp": {"S":"20220112-12:15:36"},
+                    "message": {"S":"Successfully stored retrieved info to database"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "log_level": {"S":"INFO"},
+                    "time_stamp": {"S":"20200113-09:25:45"},
+                    "message": {"S":"Successfully stored retrieved info to database"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "log_level": {"S":"WARNING"},
+                    "time_stamp": {"S":"20220415-13:14:05"},
+                    "message": {"S":"Some of the data was poorly formatted... working around it"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "log_level": {"S":"INFO"},
+                    "time_stamp": {"S":"20220415-13:14:08"},
+                    "message": {"S":"Performing calculations on the data..."}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "log_level": {"S":"INFO"},
+                    "time_stamp": {"S":"20200113-09:48:15"},
+                    "message": {"S":"Performing calculations on the data..."}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "log_level": {"S":"INFO"},
+                    "time_stamp": {"S":"20200113-10:27:48"},
+                    "message": {"S":"Performing calculations on the data..."}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "log_level": {"S":"CRITICAL"},
+                    "time_stamp": {"S":"20220415-13:14:11"},
+                    "message": {"S":"Abrupt application error!"}
+                }
+            }
+        }
+    ]
+}

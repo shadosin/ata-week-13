@@ -1,0 +1,184 @@
+{
+    "BooksRead": [
+        {
+            "PutRequest": {
+                "Item": {
+                    "id": {"S":"098dc380"},
+                    "asin": {"S":"12345678"},
+                    "author": {"S":"Satoshi Nakomoto"},
+                    "title": {"S":"Bitcoin: The Book"},
+                    "favorited": {"BOOL": true},
+                    "year_published": {"N":"2008"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "id": {"S":"3310ce4f"},
+                    "asin": {"S":"23456789"},
+                    "author": {"S":"Hermann Hesse"},
+                    "title": {"S":"Siddhartha"},
+                    "favorited": {"BOOL": false},
+                    "year_published": {"N":"1922"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "id": {"S":"e13f1492"},
+                    "asin": {"S":"34567890"},
+                    "author": {"S":"Herman Melville"},
+                    "title": {"S":"Moby Dick"},
+                    "favorited": {"BOOL": false},
+                    "year_published": {"N":"1851"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "id": {"S":"38497ff7"},
+                    "asin": {"S":"09876543"},
+                    "author": {"S":"Ernest Hemingway"},
+                    "title": {"S":"The Old Man And The Sea"},
+                    "favorited": {"BOOL": false},
+                    "year_published": {"N":"1952"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "id": {"S":"64873e5e"},
+                    "asin": {"S":"98765432"},
+                    "author": {"S":"Albert Camus"},
+                    "title": {"S":"The Myth of Sisyphus"},
+                    "favorited": {"BOOL": false},
+                    "year_published": {"N":"1942"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "id": {"S":"409e3cce"},
+                    "asin": {"S":"87654321"},
+                    "author": {"S":"Leo Tolstoy"},
+                    "title": {"S":"Anna Karenina"},
+                    "favorited": {"BOOL": true},
+                    "year_published": {"N":"1878"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "id": {"S":"87390a11"},
+                    "asin": {"S":"08642975"},
+                    "author": {"S":"Dubrovsky"},
+                    "title": {"S":"Alexander Pushkin"},
+                    "favorited": {"BOOL": false},
+                    "year_published": {"N":"1841"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "id": {"S":"567e1fc3"},
+                    "asin": {"S":"93746434"},
+                    "author": {"S":"Richard Feynman"},
+                    "title": {"S":"Surely You're Joking, Mr. Feynman!"},
+                    "favorited": {"BOOL": true},
+                    "year_published": {"N":"1985"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "id": {"S":"693d9928"},
+                    "asin": {"S":"98734987"},
+                    "author": {"S":"Sir Roger Penrose"},
+                    "title": {"S":"The Emperor's New Mind"},
+                    "favorited": {"BOOL": false},
+                    "year_published": {"N":"1989"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "id": {"S":"5b2ccd29"},
+                    "asin": {"S":"85123333"},
+                    "author": {"S":"Anatomical Drawings"},
+                    "title": {"S":"Leonardo da Vinci"},
+                    "favorited": {"BOOL": false},
+                    "year_published": {"N":"1480"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "id": {"S":"5b2ccd28"},
+                    "asin": {"S":"03758422"},
+                    "author": {"S":"Markus Zusak"},
+                    "title": {"S":"The Book Thief"},
+                    "favorited": {"BOOL": false},
+                    "year_published": {"N":"2005"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "id": {"S":"5444cd28"},
+                    "asin": {"S":"03758422"},
+                    "author": {"S":"Markus Zusak"},
+                    "title": {"S":"The Book Thief"},
+                    "favorited": {"BOOL": true},
+                    "year_published": {"N":"2005"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "id": {"S":"5b2ccd28"},
+                    "asin": {"S":"03232422"},
+                    "author": {"S":"Harper Lee"},
+                    "title": {"S":"To Kill a Mockingbird"},
+                    "favorited": {"BOOL": true},
+                    "year_published": {"N":"1960"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "id": {"S":"5b2ccd28"},
+                    "asin": {"S":"03287622"},
+                    "author": {"S":"Jean Craighead George"},
+                    "title": {"S":"My Side of the Mountain"},
+                    "favorited": {"BOOL": true},
+                    "year_published": {"N":"2001"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "id": {"S":"693d4328"},
+                    "asin": {"S":"03287622"},
+                    "author": {"S":"Jean Craighead George"},
+                    "title": {"S":"My Side of the Mountain"},
+                    "favorited": {"BOOL": false},
+                    "year_published": {"N":"2001"}
+                }
+            }
+        }
+    ]
+}

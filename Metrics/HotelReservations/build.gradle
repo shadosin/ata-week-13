@@ -1,0 +1,49 @@
+plugins {
+    id 'ata-curriculum.snippets-conventions'
+}
+
+checkstyle {
+    def suppressionFile = rootProject.file('Utilities/ATACheckstyle/configuration/checkstyle/unit1/suppressions.xml')
+    configProperties.put('checkstyle.suppression.filter', suppressionFile)
+}
+def wflowToTestsMap = [
+        'metrics-hotel-phase0': ['com.kenzie.hotel.Phase0Test'],
+        'metrics-hotel-phase1': ['com.kenzie.hotel.Phase1Test'],
+        'metrics-hotel-phase2': ['com.kenzie.hotel.Phase2Test'],
+        'metrics-hotel-all-tests': ['com.kenzie.hotel.Phase0Test',
+                                    'com.kenzie.hotel.Phase1Test',
+                                    'com.kenzie.hotel.Phase2Test']
+]
+
+wflowToTestsMap.forEach { wflowName, testList ->
+    tasks.register(wflowName) {
+        dependsOn wflowtest
+        test.doFirst {
+            filter {
+                testList.each { includeTestsMatching it }
+            }
+        }
+        test.finalizedBy(copyTestResults)
+    }
+}
+
+tasks.register('copyTestResults', Copy) {
+    from(layout.buildDirectory.dir("test-results")) {
+        include "test/TEST-com.kenzie.hotel.Phase0Test.xml"
+        include "test/TEST-com.kenzie.hotel.Phase1Test.xml"
+        include "test/TEST-com.kenzie.hotel.Phase2Test.xml"
+
+    }
+    into layout.projectDirectory.dir("test-results")
+}
+
+dependencies {
+    implementation 'javax.inject:javax.inject:1'
+    implementation 'com.google.dagger:hilt-compiler:2.41'
+    testAnnotationProcessor 'com.google.dagger:hilt-compiler:2.41'
+    implementation 'com.amazonaws:aws-java-sdk-cloudwatch:1.12.184'
+}
+
+repositories {
+    mavenCentral()
+}
