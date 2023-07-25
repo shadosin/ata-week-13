@@ -1,0 +1,144 @@
+{
+  "tests": [
+    {
+      "name": "Iterators Task Tracker Phase 1 Tests",
+      "setup": "",
+      "run": "./gradlew iterators-tasktracker-phase1-test --rerun-tasks",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Iterators Task Tracker Phase 2 Tests",
+      "setup": "",
+      "run": "./gradlew iterators-tasktracker-phase2-test --rerun-tasks",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Iterators Clothing Items Tests",
+      "setup": "",
+      "run": "./gradlew iterators-clothing-test --rerun-tasks",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Iterators Wishlist Tests",
+      "setup": "",
+      "run": "./gradlew iterators-wishlist-test --rerun-tasks",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Iterators Social Calendar Activity Tests",
+      "setup": "",
+      "run": "./gradlew iterators-socialcalendar-activitytest --rerun-tasks",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Iterators Social Calendar EventDAO Tests",
+      "setup": "",
+      "run": "./gradlew iterators-socialcalendar-eventdaotest --rerun-tasks",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Iterators Social Calendar InviteDAO Tests",
+      "setup": "",
+      "run": "./gradlew iterators-socialcalendar-invitedaotest --rerun-tasks",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Iterators Social Calendar MemberDAO Tests",
+      "setup": "",
+      "run": "./gradlew iterators-socialcalendar-memberdaotest --rerun-tasks",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "DynamoDB Query Book Test",
+      "setup": "",
+      "run": "./gradlew dynamodbquery-book-test --rerun-tasks",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "DynamoDB Query Book Test 2",
+      "setup": "",
+      "run": "./gradlew dynamodbquery-book-test2 --rerun-tasks",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "DynamoDB Query LogEntries Tests",
+      "setup": "",
+      "run": "./gradlew dynamodbquery-narrowing-test --rerun-tasks",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "DynamoDBQuery SocialCalendar Tests",
+      "setup": "",
+      "run": "./gradlew dynamodbquery-socialcalendar-github-tests --rerun-tasks",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 11,
+      "points": 1
+    },
+    {
+      "name": "Metrics Orders Tests",
+      "setup": "",
+      "run": "./gradlew metrics-orders --rerun-tasks",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Verify Social Calendar Tests",
+      "setup": "",
+      "run": "./gradlew verifytests-socialcalendar",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    }
+  ]
+}
