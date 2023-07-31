@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kenzie.socialcalendar.Phase2Test" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-07-25T13:26:01" hostname="BANANACOMP" time="1.607">
+  <properties/>
+  <testcase name="deleteMember_withNoAcceptedInvites_deletesAllInvites()" classname="com.kenzie.socialcalendar.Phase2Test" time="0.8"/>
+  <testcase name="deleteMember_withAnAcceptedInvite_leavesAcceptedInviteButDeletesOthers()" classname="com.kenzie.socialcalendar.Phase2Test" time="0.807"/>
+  <system-out><![CDATA[com.amazonaws.services.dynamodbv2.model.ConditionalCheckFailedException: The conditional request failed (Service: AmazonDynamoDBv2; Status Code: 400; Error Code: ConditionalCheckFailedException; Request ID: MJUFQTS769F92K0DA8MS46JCERVV4KQNSO5AEMVJF66Q9ASUAAJG; Proxy: null)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

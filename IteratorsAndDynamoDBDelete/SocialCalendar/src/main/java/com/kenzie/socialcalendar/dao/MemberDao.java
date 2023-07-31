@@ -50,5 +50,10 @@ public class MemberDao {
      * @param memberId The member ID for the member to delete
      */
     public void deletePermanently(String memberId) {
+        Member memberToDelete = new Member();
+        memberToDelete.setId(memberId);
+        if (memberId != null) {
+            mapper.delete(memberToDelete);
+        }
     }
 }

@@ -2,12 +2,16 @@ package com.kenzie.activity.dao;
 
 
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBQueryExpression;
+import com.amazonaws.services.dynamodbv2.model.AttributeValue;
 import com.kenzie.activity.dao.models.EventAnnouncement;
 
 import javax.inject.Inject;
 import java.time.ZonedDateTime;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Manages access to EventAnnouncement items.
@@ -32,8 +36,13 @@ public class EventAnnouncementDao {
      * @return the list of event announcements.
      */
     public List<EventAnnouncement> getEventAnnouncements(String eventId) {
+        EventAnnouncement eventAnnouncement = new EventAnnouncement();
+        eventAnnouncement.setEventId(eventId);
+
+        DynamoDBQueryExpression<EventAnnouncement> queryExpression = new DynamoDBQueryExpression<EventAnnouncement>()
+                .withHashKeyValues(eventAnnouncement);
         // TODO: implement
-        return Collections.emptyList();
+        return mapper.query(EventAnnouncement.class, queryExpression);
     }
 
     /**
@@ -47,7 +56,16 @@ public class EventAnnouncementDao {
     public List<EventAnnouncement> getEventAnnouncementsBetweenDates(String eventId, ZonedDateTime startTime,
                                                                      ZonedDateTime endTime) {
         // TODO: implement
-        return Collections.emptyList();
+       Map<String, AttributeValue> valueMap = new HashMap<>();
+       valueMap.put(":eventId", new AttributeValue().withS(eventId));
+       valueMap.put(":startTime", new AttributeValue().withS(String.valueOf(startTime)));
+       valueMap.put(":endTime", new AttributeValue().withS(String.valueOf(endTime)));
+
+       DynamoDBQueryExpression<EventAnnouncement> queryExpression = new DynamoDBQueryExpression<EventAnnouncement>()
+               .withKeyConditionExpression("eventId = :eventId and timePublished between :startTime and :endTime")
+               .withExpressionAttributeValues(valueMap);
+
+        return mapper.query(EventAnnouncement.class, queryExpression);
     }
 
     /**

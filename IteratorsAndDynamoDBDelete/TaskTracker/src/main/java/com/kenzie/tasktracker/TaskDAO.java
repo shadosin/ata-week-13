@@ -27,6 +27,7 @@ public class TaskDAO {
      */
     public void deleteTask(Task task) {
         //TODO: Implement functionality to delete the task that's passed in
+       mapper.delete(task);
     }
 
 
@@ -37,6 +38,16 @@ public class TaskDAO {
      */
     public void deleteTask(Task task, String year) {
         //TODO: Implement functionality to delete the task that's passed in if it's year_completed == year
+        Map<String, ExpectedAttributeValue> expected = new HashMap<>();
+        expected.put("year_completed", new ExpectedAttributeValue(new AttributeValue(year)));
+
+        DynamoDBDeleteExpression deleteExpression = new DynamoDBDeleteExpression().withExpected(expected);
+
+        try{
+            mapper.delete(task, deleteExpression);
+        }catch(ConditionalCheckFailedException e){
+            System.out.println(e);
+        }
     }
 
     /**

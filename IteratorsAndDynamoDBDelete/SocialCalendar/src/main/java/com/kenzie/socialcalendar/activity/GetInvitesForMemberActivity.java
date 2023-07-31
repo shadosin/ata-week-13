@@ -2,9 +2,12 @@ package com.kenzie.socialcalendar.activity;
 
 import com.kenzie.socialcalendar.dao.EventDao;
 import com.kenzie.socialcalendar.dao.InviteDao;
+import com.kenzie.socialcalendar.dao.models.CanceledInvite;
+import com.kenzie.socialcalendar.dao.models.Event;
 import com.kenzie.socialcalendar.dao.models.Invite;
 
 import java.util.List;
+import java.util.ListIterator;
 import javax.inject.Inject;
 
 /**
@@ -40,6 +43,19 @@ public class GetInvitesForMemberActivity {
      * @return List of Invites sent to the member (if any found)
      */
     public List<Invite> handleRequest(final String memberId) {
-        return inviteDao.getInvitesSentToMember(memberId);
+        List<Invite> invites = inviteDao.getInvitesSentToMember(memberId);
+        ListIterator<Invite> iterator = invites.listIterator();
+        while(iterator.hasNext()){
+            Invite invite = iterator.next();
+            String eventId = invite.getEventId();
+            Event event = eventDao.getEvent(eventId);
+            if(event.isCanceled()){
+                inviteDao.cancelInvite(eventId, memberId);
+                iterator.remove();
+                iterator.add(new CanceledInvite(invite));
+            }
+        }
+
+        return invites;
     }
 }

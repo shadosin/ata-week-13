@@ -1,5 +1,6 @@
 package com.kenzie.hotel.activity;
 
+import com.amazonaws.services.cloudwatch.model.StandardUnit;
 import com.kenzie.hotel.dao.ReservationDao;
 import com.kenzie.hotel.dao.models.UpdatedReservation;
 import com.kenzie.hotel.metrics.MetricsPublisher;
@@ -38,6 +39,11 @@ public class ModifyReservationActivity {
 
         UpdatedReservation updatedReservation = reservationDao.modifyReservation(reservationId, checkInDate,
             numberOfNights);
+        metricsPublisher.addMetric("ModifiedReservationCount", 1, StandardUnit.Count);
+        metricsPublisher.addMetric("ReservationRevenue",
+                updatedReservation.getModifiedReservation().getTotalCost().doubleValue() -
+                        updatedReservation.getOriginalReservation().getTotalCost().doubleValue()
+        , StandardUnit.None);
         return updatedReservation;
     }
 }

@@ -84,7 +84,8 @@ public class EventDao {
         // PARTICIPANTS: replace this implementation to perform a soft delete
         Event canceledEvent = new Event();
         canceledEvent.setId(eventId);
-        mapper.delete(canceledEvent);
-        return null;
+        canceledEvent.setCanceled(true);
+        mapper.save(canceledEvent);
+        return canceledEvent;
     }
 }

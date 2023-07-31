@@ -39,6 +39,6 @@ public class GetEventAnnouncementsBetweenDatesActivity {
                                                  final ZonedDateTime startTime,
                                                  final ZonedDateTime endTime) {
         // TODO: implement
-        return Collections.emptyList();
+        return eventAnnouncementDao.getEventAnnouncementsBetweenDates(eventId, startTime, endTime);
     }
 }

@@ -1,6 +1,7 @@
 package com.kenzie.hotel.activity;
 
 
+import com.amazonaws.services.cloudwatch.model.StandardUnit;
 import com.kenzie.hotel.dao.ReservationDao;
 import com.kenzie.hotel.dao.models.Reservation;
 import com.kenzie.hotel.metrics.MetricsPublisher;
@@ -34,6 +35,8 @@ public class BookReservationActivity {
     public Reservation handleRequest(Reservation reservation) {
 
         Reservation response = reservationDao.bookReservation(reservation);
+        metricsPublisher.addMetric("BookedReservationCount", 1, StandardUnit.Count);
+        metricsPublisher.addMetric("ReservationRevenue", response.getTotalCost().doubleValue(), StandardUnit.None);
         return response;
     }
 }

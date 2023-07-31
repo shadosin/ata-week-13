@@ -2,16 +2,15 @@ package com.kenzie.activity.dao;
 
 
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBQueryExpression;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBScanExpression;
+import com.amazonaws.services.dynamodbv2.datamodeling.QueryResultPage;
 import com.amazonaws.services.dynamodbv2.model.AttributeValue;
 import com.google.common.collect.ImmutableMap;
 import com.kenzie.activity.dao.models.Invite;
 
 import javax.inject.Inject;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 /**
  * Manages access to Invite items.
@@ -102,6 +101,22 @@ public class InviteDao {
      */
     public List<Invite> getInvitesForEvent(String eventId, String exclusiveStartMemberId) {
         // TODO: implement
-        return Collections.emptyList();
+        Invite invite = new Invite();
+        invite.setEventId(eventId);
+
+        Map<String, AttributeValue> exclusiveStartKey = null;
+        if(exclusiveStartMemberId != null){
+            exclusiveStartKey = new HashMap<>();
+            exclusiveStartKey.put("eventId", new AttributeValue().withS(eventId));
+            exclusiveStartKey.put("memberId", new AttributeValue().withS(exclusiveStartMemberId));
+        }
+        DynamoDBQueryExpression<Invite> queryExpression = new DynamoDBQueryExpression<Invite>()
+                .withHashKeyValues(invite)
+                .withExclusiveStartKey(exclusiveStartKey)
+                .withLimit(10);
+
+        QueryResultPage<Invite> inviteQueryResultPage = mapper.queryPage(Invite.class, queryExpression);
+        List<Invite> inviteList = inviteQueryResultPage.getResults();
+        return inviteList;
     }
 }

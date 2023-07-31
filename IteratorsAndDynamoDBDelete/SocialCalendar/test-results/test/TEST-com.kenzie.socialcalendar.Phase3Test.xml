@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kenzie.socialcalendar.Phase3Test" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-07-25T13:26:03" hostname="BANANACOMP" time="0.438">
+  <properties/>
+  <testcase name="cancelEvent_doesNotDeleteEvent()" classname="com.kenzie.socialcalendar.Phase3Test" time="0.248"/>
+  <testcase name="cancelEvent_updatesEventToCanceled()" classname="com.kenzie.socialcalendar.Phase3Test" time="0.19"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

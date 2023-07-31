@@ -1,6 +1,7 @@
 package com.kenzie.iteratorsanddynamodb.wishlist;
 
 import java.util.List;
+import java.util.ListIterator;
 
 public class WishList {
 
@@ -11,6 +12,14 @@ public class WishList {
      * @return the wishList with the newly added item
      */
     public List<WishListItem> addLast(List<WishListItem> wishList, WishListItem item) {
+        ListIterator<WishListItem> wishIterator = wishList.listIterator();
+
+        while(wishIterator.hasNext()){
+            wishIterator.next();
+        }
+
+        wishIterator.add(item);
+
         return wishList;
     }
 
@@ -22,6 +31,24 @@ public class WishList {
      * @return the wishList with the newly added item
      */
     public List<WishListItem> addAtIndex(List<WishListItem> wishList, WishListItem item, int index) {
+        ListIterator<WishListItem> wishIterator = wishList.listIterator();
+
+        int currentIndex = 0;
+        boolean added = false;
+
+        while(wishIterator.hasNext()){
+            if(currentIndex == index){
+                wishIterator.add(item);
+                added = true;
+            }
+            wishIterator.next();
+            currentIndex ++;
+        }
+
+        if (!added){
+            wishIterator.add(item);
+        }
+
         return wishList;
     }
 
@@ -31,6 +58,13 @@ public class WishList {
      * @return the empty wishList
      */
     public List<WishListItem> removeAll(List<WishListItem> wishList) {
+        ListIterator<WishListItem> wishIterator = wishList.listIterator();
+
+        while(wishIterator.hasNext()){
+            wishIterator.next();
+            wishIterator.remove();
+        }
+
         return wishList;
     }
 
@@ -41,6 +75,13 @@ public class WishList {
      * @return the wishList with the removed item
      */
     public List<WishListItem> removeItem(List<WishListItem> wishList, WishListItem item) {
+        ListIterator<WishListItem> wishIterator = wishList.listIterator();
+        while(wishIterator.hasNext()){
+            if(wishIterator.next().equals(item)){
+                wishIterator.remove();
+            }
+        }
+
         return wishList;
     }
 }
